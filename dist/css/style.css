@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Permanent+Marker|Roboto+Condensed&display=swap');
+
+@media only screen and (max-width: 800px) {
+    .menuBtn{
+        width:50% !important;
+    }
+    #info{
+        width: 80% !important;
+    }
+    #info #close{
+        left:88% !important;
+    }
+    #controllerBox{
+        width:85% !important;
+    }
+    .playerDevices{
+        width:90% !important;
+        margin:5% 0 !important;
+    }
+    #controllerBox #importantInfo{
+        margin:5% 0 !important;
+    }
+  }
+        body, html{
+            width: 100%;
+            height: 100%;
+            margin:0;
+        }
+        canvas{
+            display: block;
+        }
+        .mainMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            background: #0d0d0d;
+        }
+        #playersCover{
+            position: fixed;
+            top:0;
+            z-index:0;
+            width:100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .playerCover{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            z-index:10;
+        }
+        #boom{
+            position: absolute;
+            top:500px;
+            width:54px;
+            height:54px;
+            background-repeat: no-repeat;
+            transform: translate(-25%, -75%);
+        }
+        .miniatureBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top:8%;
+        }
+        .miniatureBox img{
+            width:32px;
+            height:32px;
+        }
+        .miniatureBox div{
+            font-family: 'Baloo Chettan 2', cursive;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            color:#fff;
+        }
+        #firstPlayer{
+            left:5%;
+        }
+        #secondPlayer{
+            left:94%;
+        }
+        .mainMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top:0%;
+            left:0%;
+            color:#fff;
+            width: 100%;
+            height: 100%;
+            z-index:99999;
+        }
+        .mainMenu #logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .mainMenu #logo img{
+            max-width: 90%;
+        }
+        .menuBtn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto Condensed', sans-serif;
+            border:2px solid #ffcc00;
+            color:#ffcc00;
+            background: transparent;
+            letter-spacing: 2px;
+            font-size:22px;
+            padding:5px 10px;
+            margin-top:50px;
+            text-transform: uppercase;
+            text-align: center;
+            width:15%;
+            transition: all .2s;
+            cursor: pointer;
+        }
+        .menuBtn:hover{
+
+            background: rgb(255,204,0);
+            background: linear-gradient(111deg, rgba(255,204,0,1) 29%, rgba(201,165,21,1) 60%);
+            border:2px solid #ffcc00;
+            color:#0d0d0d;
+        } 
+        .playerHp{
+            display: flex;
+            justify-content: center;
+        }
+        #firstPlayerHp{
+            margin-left:10px;
+        }
+        #secondPlayerHp{
+            margin-right:10px;
+        }
+        .hpPoint{
+            background: green;
+            border:1px solid darkgreen;
+            width:10px;
+            height:15px;
+            margin:0 2px
+        }
+        #info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            z-index: 9999999;
+            background: #0d0d0d;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Roboto Condensed', sans-serif;
+            width:60%;
+            max-height: 90%;
+            color:#ffcc00;
+            padding:10px;
+            -webkit-box-shadow: 7px 9px 16px 3px rgba(0,0,0,0.75);
+            -moz-box-shadow: 7px 9px 16px 3px rgba(0,0,0,0.75);
+            box-shadow: 7px 9px 16px 3px rgba(0,0,0,0.75);
+        }
+        #controls #controlsPlayer1, #controlsPlayer2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width:50%;
+        }
+        #controls #controlsPlayer1 div, #controls #controlsPlayer2 div{
+            font-size:17px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin:2.5% 0;
+        }
+        #controls #controlsPlayer1 div img, #controls #controlsPlayer2 div img{
+            margin-left:10px;
+        }
+        #info #close{
+            position: absolute;
+            top:1%;
+            left:95%;
+            cursor: pointer;
+        }
+        #info #controls{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:22px;
+            text-align: center;
+            margin-bottom:3%;
+            padding-bottom:20px;
+            border-bottom: 2px solid #ffcc00;
+            width:80%;
+            
+        }
+        .whichPlayer{
+            font-size:24px;
+            font-weight: bold;
+        }
+        #info #boostWrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #info #logo img{
+            width: 250px;
+        }
+        #info #iconsBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-right:2px solid #ffcc00;
+            padding-right:20px;
+        }
+        #info #iconsBox img{
+            margin:5px 0;
+        }
+        #info #iconsDesc{
+            margin-left:10%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        #info #iconsDesc div{
+            margin:6% 0;
+        }
+
+#overlayer{
+    background: #000;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0%;
+    left:0%;
+    z-index:99999999;
+    opacity: 0.7;
+}
+
+#mute{
+    position: fixed;
+    top:93%;
+    left:2%;
+    cursor: pointer;
+}
+
+#endScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:999999999;
+    background: #0d0d0d;
+    border-radius: 15px;
+    width:40%;
+    color:#ffcc00;
+    font-family: 'Baloo Chettan 2', cursive;
+    padding: 20px;;
+    -webkit-box-shadow: 7px 9px 16px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 9px 16px 3px rgba(0,0,0,0.75);
+    box-shadow: 7px 9px 16px 3px rgba(0,0,0,0.75);
+}
+
+#endScreen h1{
+    letter-spacing: 3px;
+}
+
+#endScreen h1 span{
+    font-weight: bold;
+    color:#fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#endScreenMenu div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    border:2px solid #ffcc00;
+    color:#ffcc00;
+    background: transparent;
+    letter-spacing: 2px;
+    font-size:22px;
+    padding:5px 10px;
+    margin-top:50px;
+    text-transform: uppercase;
+    width:auto
+    transition: all .2s;
+    cursor: pointer;
+}
+#endScreenMenu div:hover{
+
+    background: rgb(255,204,0);
+    background: linear-gradient(111deg, rgba(255,204,0,1) 29%, rgba(201,165,21,1) 60%);
+    border:2px solid #ffcc00;
+    color:#0d0d0d;
+} 
+
+#controllerBox{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index:9999999999999999;
+    top:50%;
+    left:50%;
+    width: 70%;
+    min-height:50%;
+    background: #1d1d1d;
+    color:#ffcc00;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding:20px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+#controllerBox .playerDevices{
+    background: #0d0d0d;
+    width:40%;
+    height:70%;
+    font-size:22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0 3%;
+    padding:20px;
+}
+#controllerBox .deviceImageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#controllerBox #playerDevicesWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#controllerBox .deviceImageWrapper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 30px;
+    cursor: pointer;
+    padding:20px;
+    width:30px;
+    height:30px;
+    transition: all .2s;
+}
+#controllerBox .deviceImageWrapper div:first-of-type{
+    border-radius: 50%;
+    background: #1d1d1d;
+}
+#controllerBox .playerDeviceInformation{
+    margin-bottom:50px;
+}
+.genericBtn:hover{
+    background: transparent;
+    color:#ffcc00;
+}
+.genericBtn{
+    text-align: center;
+    background: #ffcc00;
+    color:#0d0d0d;
+    font-size: 22px;
+    padding:5px 10px;
+    width:20%;
+    cursor: pointer;
+    border:2px solid #ffcc00;
+    transition: all .3s;
+}
+#smallScreenInfo{
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    z-index: 9999999999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #0d0d0d;
+    width:80%;
+    min-height:50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color:#ffcc00;
+    padding:20px;
+    text-align: center;
+}
+
+#smallScreenInfo #logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#smallScreenInfo #logo img{
+    max-width: 100%;
+}
+
+#smallScreenInfo h1{
+    font-size: 22px;
+    margin:10% 0;
+}
