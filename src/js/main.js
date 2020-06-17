@@ -221,6 +221,7 @@ function gameInit(){
     canvasScale();
     startGameLoop();
     players.forEach(player => {
+        //Preperation for user choosed device
         if(player.device === "keyboard"){
             startTankKeyboardMovment(player);
         }
@@ -267,6 +268,7 @@ function unConnectGamePad(player){
 (function init(){
     document.querySelector("#startGame").addEventListener("click", () => {
         if(window.screen.width < 900){
+            //Check for mobile users
             return tooSmallScreen();
         }
         document.querySelector(".mainMenu").remove();
